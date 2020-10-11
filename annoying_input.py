@@ -10,6 +10,7 @@ get_int(start_message, error_message, end_message),
 полученное целое число из функции (см. пример работы). Каждое
 выводимое сообщение должно находиться на отдельной строке."""
 
+
 def get_int(start_message, error_message, end_message):
     print(start_message)
     while True:
