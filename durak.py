@@ -32,7 +32,7 @@ def judge(card_1: tuple, card_2: tuple, trump: str):
         if CARDS.index(value_1) > CARDS.index(value_2):
             return 'First'
         else:
-            return 'Second'  
+            return 'Second'
 
 
 def main():
