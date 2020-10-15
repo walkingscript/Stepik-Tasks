@@ -1,9 +1,3 @@
-from loguru import logger
-
-
-logger.add('log')
-
-
 def print_field(field: list) -> None:
     for line in field:
         print(''.join(line))
@@ -21,10 +15,10 @@ def get_next_field(field: list, size: tuple) -> list:
                 try:
                     pos1 = i + x
                     if pos1 == n:
-                        pos1 = -1
+                        pos1 = 0
                     pos2 = j + y 
                     if pos2 == m:
-                        pos2 = -1
+                        pos2 = 0
                     neighbors.append(field[pos1][pos2])
                 except IndexError:
                     continue
@@ -47,7 +41,6 @@ def main():
             field.append(line)
         else:
             raise ValueError
-    print_field(field)
     next_field = get_next_field(field, (n, m))
     print_field(next_field)
 
