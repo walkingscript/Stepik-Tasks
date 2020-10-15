@@ -14,7 +14,7 @@ CARDS = ('6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A')
 
 
 def judge(card_1: tuple, card_2: tuple, trump: str):
-    value1, suit_1, value_2, suit_2 = *card_1, *card_2
+    value_1, suit_1, value_2, suit_2 = *card_1, *card_2
     # если карты разных мастей и есть козыри
     if suit_1 != suit_2 and (suit_1 == trump or suit_2 == trump):
         # карта с козырной мастью побеждает
