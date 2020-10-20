@@ -6,13 +6,13 @@
 
 def get_matrix(count_of_lines: int) -> list:
     matrix = []
-    for i in range(count_of_lines):
+    for _ in range(count_of_lines):
         matrix.append(list(map(int, input().split())))
     return matrix
 
 
 def transp(matrix: list) -> list:
-    n, m = len(matrix), len(matrix[0])
+    _, m = len(matrix), len(matrix[0])
     res_mat = [[] for i in range(m)]
     for line in matrix:
         for number, item in enumerate(line):
@@ -27,7 +27,7 @@ def print_mat(matrix):
 
 
 def main():
-    n, m = map(int, input().split(' '))
+    n, _ = map(int, input().split(' '))
     mat = get_matrix(n)
     transp_mat = transp(mat)
     print_mat(transp_mat)
