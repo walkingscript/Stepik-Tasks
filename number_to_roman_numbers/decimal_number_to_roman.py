@@ -16,6 +16,7 @@ NUMBER_EXCEPTIONS = {
 
 search_dict = ChainMap(ROMAN_NUMBERS, NUMBER_EXCEPTIONS)
 
+
 def divide_to_parts(n: int):
     parts = []
     for k, _ in ROMAN_NUMBERS.items():
@@ -28,15 +29,19 @@ def divide_to_parts(n: int):
 
 
 def to_full_list_sequence(sequence: list):
-    '''Возвращает список, элементами которого являются
-    только списки с уровнем вложенности 0.'''
+    """
+    Возвращает список, элементами которого являются
+    только списки с уровнем вложенности 0.
+    """
     return [x if type(x) is list else [x,] for x in sequence]
 
 
 def make_roman_numbers(sequence: list[int]):
-    '''Преобразует последовательность чисел таким образом,
-    чтобы её можно было преобразовать в строку с римскими 
-    числами с максимальной эффективностью.'''
+    """
+    Преобразует последовательность чисел таким образом,
+    чтобы её можно было преобразовать в строку с римскими
+    числами с максимальной эффективностью.
+    """
     # 1-ое правило
     i = 1
     while i < len(sequence):
