@@ -1,4 +1,4 @@
-'''
+"""
 На вход поступают карты в формате значение-масть и козырь.
 Программа определяет бьёт ли одна карта другую.
 Пример входных данных: 
@@ -6,7 +6,7 @@
     H
 Результат:
     Second
-'''
+"""
 import re
 
 
@@ -39,7 +39,7 @@ def main():
     _in = input().upper()
     trump = input().upper()
 
-    regex = re.compile('(6|7|8|9|10|J|Q|K|A)(C|D|H|S)')
+    regex = re.compile(f'([{"".join(CARDS)}])([CDHS])')
     card_1, card_2 = regex.findall(_in)
 
     print(judge(card_1, card_2, trump))

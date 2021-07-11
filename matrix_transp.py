@@ -13,7 +13,7 @@ def get_matrix(count_of_lines: int) -> list:
 
 def transp(matrix: list) -> list:
     _, m = len(matrix), len(matrix[0])
-    res_mat = [[] for i in range(m)]
+    res_mat = [[] for _ in range(m)]
     for line in matrix:
         for number, item in enumerate(line):
             res_mat[number].append(item)

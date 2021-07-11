@@ -7,7 +7,7 @@ n, m = map(int, input().split(' '))
 
 field = []
 
-neibours = ((0,1), (1,1), (1,0), (1,-1), 
+neighbours = ((0,1), (1,1), (1,0), (1,-1),
             (0,-1), (-1,-1), (-1,0), (-1,1))
 
 for i in range(n):
@@ -18,7 +18,7 @@ for i in range(n):
         if field[i][j] == '*':
             continue        
         count = 0
-        for x, y in neibours:
+        for x, y in neighbours:
             try:
                 pos1 = i + x
                 pos2 = j + y
