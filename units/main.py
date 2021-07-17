@@ -1,3 +1,16 @@
+"""
+Through standard input program receiving strings with units that needs to be converted and returns result.
+
+Input string format:
+
+    {quantity} {unit_name_that_needs_to_be_converted} in {unit_name_to_convert_quantity}
+
+Example:
+
+    5298 mile in foot
+"""
+
+
 import re
 import sys
 
