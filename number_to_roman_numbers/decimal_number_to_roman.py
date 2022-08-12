@@ -36,7 +36,7 @@ def to_full_list_sequence(sequence: list):
     return [x if type(x) is list else [x,] for x in sequence]
 
 
-def make_roman_numbers(sequence: list[int]):
+def make_roman_numbers(sequence: list[list[int]]):
     """
     Преобразует последовательность чисел таким образом,
     чтобы её можно было преобразовать в строку с римскими
